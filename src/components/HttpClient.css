@@ -1,0 +1,207 @@
+.http-client {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.request-panel {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.request-line {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.method-select {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  min-width: 100px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.send-button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.send-button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.send-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.clear-button {
+  padding: 10px 15px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-button:hover {
+  background: #5a6268;
+}
+
+.request-body {
+  display: flex;
+  gap: 20px;
+}
+
+.section {
+  flex: 1;
+}
+
+.section h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #495057;
+}
+
+.headers-textarea,
+.body-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+  resize: vertical;
+}
+
+.response-panel {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  overflow: auto;
+}
+
+.response-panel h3 {
+  margin: 0 0 15px 0;
+  color: #495057;
+}
+
+.response-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.status-2xx {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-3xx {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-4xx,
+.status-5xx,
+.status-error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.time {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.response-headers,
+.response-body {
+  margin-bottom: 20px;
+}
+
+.response-headers h4,
+.response-body h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #495057;
+}
+
+.response-headers pre,
+.response-body pre {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 15px;
+  overflow-x: auto;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 12px;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.error-content {
+  color: #721c24;
+}
+
+.error-message {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.error-response .response-body pre {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+@media (max-width: 768px) {
+  .request-body {
+    flex-direction: column;
+  }
+  
+  .request-line {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .method-select {
+    min-width: auto;
+  }
+}
